@@ -34,4 +34,15 @@ export default MyApp;
 
 8. Cuando hacemos fetching de datos del lado del cliente al cargar la pagina no estan los datos inmediatamente, es decir esto no aparece en el html inicial. Para ello podemos hacer el fetching desde el servidor, de esta forma es mas rapido y estará al inicio en el html. La funcion de next que permite hacer esto es getServerSideProps. 
 
+9. Componente Image. Debes indicarle el width y height, si no next no permite colocarla. Para hacerlas responsive se le coloca layout="responsive". Ademas al colocar una imagen externa a nuestro servidor por asuntos de seguridad se le debe indicar a next los dominios desde los cuales vamos a cargar imagenes. En next.config se le agrega la propiedad images {} con la llave domains: [] con valor de Array de strings, indicando los dominios a usar (sin protocolo, es decir https, http, etc)
+  Propiedades: 
+    width
+    height
+    src
+    priority => boolean => Sirve para el lazy loading, ya que si se le coloca prioridad cargara antes. Por defecto las imagenes tienen Lazy loading
+    layout
+    quality
+    placeholder => "blur" => Hace efecto de blur, solo para imagenes estaticas, almacenadas en el servidor
+    blurDataURL => Para imagenes dinamicas, utilzar imagenes de base 64
+
 */

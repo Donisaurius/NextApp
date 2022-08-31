@@ -1,25 +1,22 @@
-import LoginForm from "../components/LoginForm";
-import LoginLayout from "../shared/LoginLayout";
 import PageLayout from "./PageLayout";
+import SignInForm from "../components/SignInForm";
+import LoginLayout from "../shared/LoginLayout";
 
-const styles = {
+const formStyles = {
   background: "#D9D9D9",
   padding: "20px",
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
   borderRadius: "24px",
-  height: "348px",
 };
 
-function login() {
+export default function signin() {
   return (
-    <PageLayout display="none">
+    <PageLayout title="Welcome | Sign in" display="block">
       <LoginLayout>
-        <LoginForm styles={styles} />
+        <SignInForm formStyles={formStyles} />
       </LoginLayout>
     </PageLayout>
   );
 }
-
-export default login;

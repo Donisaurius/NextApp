@@ -33,6 +33,10 @@ $dark: #4b4b4b !default;
 $font-family-sans-serif: "Montserrat", Helvetica, Arial, serif !default;
 $font-family-monospace: "Montserrat", Helvetica, Arial, serif !default;
 
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
 /* make the customizations */
 $theme-colors: (
   "primary": $primary,
